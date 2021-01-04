@@ -1,0 +1,1 @@
+web: gunicorn GitHubJob.wsgi --log-file -

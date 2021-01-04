@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/result.css' %}">
+
+<div class="notifier">
+    <p class="notifier__search">Search Result For All Jobs</span></p>
+    <p class="notifier__page">Page {{ page }} of {{ max }}</p>
+</div>
+
+{% for job in jobs %}
+    <a class="job" href="{{ job.url }}" target="_blank">
+        <div class="job__left">
+            <img class="job__left-company" src="{{ job.company_logo }}">
+            <p class="job__left-title">{{ job.title }}</p>
+        </div>
+        <div class="job__right">
+            <p class="job__right-company-name">Company : {{ job.company }}</p>
+            <p class="job__right-location">Location: {{ job.location }}</p>
+            <p class="job__right-type">Type : {{ job.type }}</p>
+        </div>
+    </a>
+{% endfor %}
+
+<div class="pager">
+    <p>Page:
+        {% for page_index in pages %}
+            <a href="/all?page={{ page_index }}">{{ page_index }}</a>
+        {% endfor %}
+    </p>
+</div>
+
+{% endblock %}

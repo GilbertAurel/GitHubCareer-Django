@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/home.css' %}">
+
+<div class="what">
+    <div class="what__caption">
+        <h1>What is GitHub Career?</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+            do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+    </div>
+</div>
+
+<div class="learn">
+    <div class="learn__logo"></div>
+    <div class="learn__content">
+        <h1>Learn more about GitHub</h1>
+        <p>GitHub, Inc. is a subsidiary of Microsoft which provides hosting
+            for software development and version control using Git.</p>
+        <a href="/">Go to GitHub</a>
+    </div>
+</div>
+{% endblock %}

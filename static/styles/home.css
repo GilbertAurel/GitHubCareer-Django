@@ -1,0 +1,155 @@
+.what {
+  height: 400px;
+  width: 65%;
+  margin: 0em auto 5em auto;
+  box-shadow: 0px 1px 10px 2px rgba(0, 0, 255, 0.2);
+  border-radius: 25px;
+  background-color: #191928;
+  background-image: url("../images/bg-man.png");
+  background-position: right bottom;
+  background-size: 90%;
+  background-repeat: no-repeat;
+  color: white;
+}
+.what__caption {
+  height: 50%;
+  width: 50%;
+  margin-left: 5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.what__caption h1 {
+  margin-top: 4em;
+  margin-bottom: 0.5em;
+  font-size: 40px;
+}
+.what__caption p {
+  font-size: 20px;
+}
+
+.learn {
+  height: 300px;
+  width: 45%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.learn__logo {
+  width: 450px;
+  height: 200px;
+  box-shadow: 0px 1px 10px 2px rgba(0, 0, 255, 0.2);
+  border-radius: 10px;
+  background-image: url("../images/github-black.png");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.learn__content {
+  width: 40%;
+}
+.learn__content h1 {
+  margin-bottom: 0.5em;
+}
+.learn__content p {
+  margin-bottom: 1.5em;
+  color: #4f4f4f;
+}
+.learn__content a {
+  border-radius: 40px;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  color: white;
+  background-color: #236BFD;
+  transition: 0.5s;
+}
+.learn__content a:hover {
+  background-color: #023eb8;
+}
+
+@media only screen and (max-width: 500px) {
+  /* For mobile phones: */
+  .what {
+    height: 200px;
+    width: 90vw;
+    background-size: 120%;
+    margin-bottom: 1em;
+  }
+  .what__caption {
+    width: 40%;
+    margin-left: 2em;
+  }
+  .what__caption h1 {
+    margin-top: 4em;
+    margin-bottom: 0.5em;
+    font-size: 20px;
+  }
+  .what__caption p {
+    font-size: 10px;
+  }
+
+  .learn {
+    height: 200px;
+    width: 80%;
+  }
+  .learn__logo {
+    width: 60%;
+    height: 50%;
+    background-size: 130%;
+  }
+  .learn__content {
+    width: 35%;
+  }
+  .learn__content h1 {
+    margin-bottom: 0.5em;
+    font-size: 18px;
+  }
+  .learn__content p {
+    margin-bottom: 1.5em;
+    font-size: 12px;
+    color: #4f4f4f;
+    position: absolute;
+    left: -1000px;
+  }
+  .learn__content a {
+    border-radius: 40px;
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 1600px) and (min-width: 1024px) {
+  /* For 1280x720: */
+  .what {
+    height: 300px;
+    width: 75%;
+  }
+  .what__caption h1 {
+    font-size: 30px;
+  }
+  .what__caption p {
+    font-size: 18px;
+  }
+
+  .learn {
+    height: 300px;
+    width: 65%;
+  }
+  .learn__logo {
+    width: 50%;
+    height: 80%;
+    background-color: black;
+    background-size: 120%;
+  }
+  .learn__content h1 {
+    font-size: 30px;
+  }
+  .learn__content p {
+    font-size: 15px;
+  }
+  .learn__content a {
+    font-size: 15px;
+  }
+}
+
+/*# sourceMappingURL=home.css.map */

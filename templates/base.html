@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/base.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.ico' %}"/>
+    <script src="{% static 'javascripts/home.js' %}"></script>
+    <title>GitHub Career</title>
+</head>
+<body>
+    <div class="nav">
+        <div class="nav__container">
+            <a href="/home" class="nav__logo"></a>
+            <div class="nav__btn">
+                <a href="/all/">See all jobs</a>
+                <a href="/">Sign in</a>
+                <a href="/" class="nav__btn-register">Register</a>
+            </div>
+
+            <div class="nav__dropdown">
+              <button class="nav__dropdown-btn">Menu</button>
+              <div class="nav__dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header">
+        <div class="header__title">
+            <h1 class="header__title-heading">If you’re looking for a job, <br>GitHub Career is always here for you.</h1>
+            <p class="header__title-caption">Millions of people are searching for jobs, salary information,
+                company reviews, and interview questions. See what others are looking
+                for on GitHub Career today.</p>
+        </div>
+
+        <div class="header__search">
+            <form action="/result/" method="post">
+                <select name="types" class="header__search-type">
+                    <option value="Other">All types</option>
+                    <option value="Full Time">Full time</option>
+                    <option value="Part Time">Part time</option>
+                </select>
+
+                <input type="text" name="position" class="header__search-position" id="input_form" placeholder="Search position.." autocomplete="off">
+
+                <button class="header__search-submit" id="submit_form">Search</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <div class="footer">
+        <div class="footer__container">
+            <div class="footer__left">
+                <div class="footer__logo"></div>
+                <p>@2020 GitHub Career by Gilbert L19253010</p>
+            </div>
+
+            <div class="footer__middle">
+                <h1>Disclaimer</h1>
+                <p>Data on this site is provided and always up to date to GitHub API.</p>
+            </div>
+
+            <div class="footer__right">
+                <h1>Connect with us</h1>
+                <div class="footer__right-socmed">
+                    <a class="footer__right-instagram" href="https://www.instagram.com/gilbertaurel/" target="_blank"><div></div></a>
+                    <a class="footer__right-github" href="https://github.com/GilbertAurel" target="_blank"><div></div></a>
+                    <a class="footer__right-linkedin" href="https://www.linkedin.com/in/gilbertus-aurel-satyawira/" target="_blank"><div></div></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

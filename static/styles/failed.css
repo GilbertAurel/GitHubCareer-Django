@@ -1,0 +1,54 @@
+.fail {
+  width: 50%;
+  height: 50%;
+  margin: auto;
+}
+.fail__img {
+  height: 10em;
+  width: 10em;
+  margin: auto;
+  background-image: url("../images/404.png");
+  background-position: center;
+  background-size: 10em;
+  background-repeat: no-repeat;
+}
+.fail h1 {
+  margin-top: 2em;
+  text-align: center;
+  font-weight: 500;
+  color: #F0F0F0;
+}
+.fail h1 span {
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 500px) {
+  /* For mobile phones: */
+  .fail {
+    padding-top: 50px;
+  }
+  .fail__img {
+    height: 5em;
+    width: 5em;
+    background-size: 5em;
+  }
+  .fail h1 {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 1600px) and (min-width: 1024px) {
+  /* For 1280x720: */
+  .fail {
+    padding-top: 100px;
+  }
+  .fail__img {
+    height: 8em;
+    width: 8em;
+    background-size: 8em;
+  }
+  .fail h1 {
+    font-size: 18px;
+  }
+}
+
+/*# sourceMappingURL=failed.css.map */

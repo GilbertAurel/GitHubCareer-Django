@@ -1,0 +1,236 @@
+$main-blue: #191928;
+$light-blue: #236BFD;
+$light-gray: #F0F0F0;
+$white: #ffffff;
+
+.notifier{
+  width: 65%;
+  margin: 0 auto 2em auto;
+  display: flex;
+  justify-content: space-between;
+
+  p{
+    margin: 0em 2em;
+    font-size: 18px;
+    color: #4f4f4f;
+  }
+
+  span{
+    font-weight: 700;
+  }
+}
+
+.job{
+  height: 150px;
+  width: 65%;
+  margin: 0em auto 2em auto;
+  box-shadow: 0px 1px 5px 1px rgba(0, 0, 255, .2);
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  transition: .3s;
+
+  &__left{
+    height: 70%;
+    width: 50%;
+    margin-left: 7em;
+    display: flex;
+    align-items: center;
+
+    &-company{
+      max-height: 80px;
+      width: 80px;
+      margin-right: 40px;
+    }
+
+    &-title{
+      font-size: 24px;
+      color: $light-blue;
+    }
+  }
+
+  &__right{
+    height: 70%;
+    margin-right: 7em;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    p{
+      width: 250px;
+    }
+
+    &-company-name{
+      margin-bottom: .5em;
+      font-size: 13px;
+      color: #4f4f4f;
+    }
+
+    &-location{
+      margin-bottom: .5em;
+      font-size: 13px;
+      color: #4f4f4f;
+    }
+
+    &-type{
+      font-size: 13px;
+      color: #4f4f4f;
+    }
+  }
+
+  &:focus{
+    outline: none;
+  }
+
+  &:hover{
+    background-color: darken($white, 2);
+    transform: scale(1.03);
+  }
+}
+
+.pager{
+  width: 500px;
+  height: 100px;
+  margin: 4em auto 0em auto;
+
+  p{
+    margin: auto;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  a{
+    text-align: center;
+    margin-left: 1.5em;
+    text-decoration: none;
+    color: $light-blue;
+  }
+}
+
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+
+  .notifier{
+    width: 90%;
+    margin: 0 auto 2em auto;
+
+    p{
+      margin: 0em 1em;
+      font-size: 12px;
+    }
+  }
+
+  .job{
+    height: 80px;
+    width: 90%;
+    border-radius: 15px;
+    margin: 0em auto 1.5em auto;
+
+    &__left{
+      height: 70%;
+      width: 55%;
+      margin-left: 1.5em;
+
+      &-company{
+        max-height: 40px;
+        width: 40px;
+        margin-right: 20px;
+      }
+
+      &-title{
+        font-size: 12px;
+      }
+    }
+
+    &__right{
+      height: 70%;
+      margin-right: 1em;
+
+      p{
+        width: 100px;
+      }
+
+      &-company-name{
+        margin-bottom: .5em;
+        font-size: 8px;
+      }
+
+      &-location{
+        position: absolute;
+        left: -1000px;
+      }
+
+      &-type{
+        font-size: 8px;
+      }
+    }
+  }
+
+  .pager{
+    width: 70%;
+    height: 50px;
+    margin: 4em auto 0em auto;
+
+    p{
+      font-size: 12px;
+    }
+
+    a{
+      margin-left: 1em;
+    }
+  }
+}
+
+@media only screen and (max-width:1600px)  and (min-width: 1024px){
+  /* For 1280x720: */
+
+  .notifier{
+    width: 65%;
+
+    p{
+      font-size: 15px;
+    }
+  }
+
+  .job{
+    &__left{
+      height: 70%;
+      width: 50%;
+      margin-left: 2.4em;
+
+      &-title{
+        font-size: 18px;
+      }
+    }
+
+    &__right{
+      height: 70%;
+      margin-right: 2em;
+
+      p{
+        width: 220px;
+      }
+
+      &-company-name{
+        font-size: 12px;
+      }
+
+      &-location{
+        font-size: 12px;
+      }
+
+      &-type{
+        font-size: 12px;
+      }
+    }
+  }
+
+  .pager{
+    p{
+      font-size: 15px;
+    }
+  }
+}

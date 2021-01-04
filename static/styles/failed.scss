@@ -1,0 +1,66 @@
+$main-blue: #191928;
+$light-blue: #236BFD;
+$light-gray: #F0F0F0;
+$white: #ffffff;
+
+.fail{
+  width: 50%;
+  height: 50%;
+  margin: auto;
+
+  &__img{
+    height: 10em;
+    width: 10em;
+    margin: auto;
+    background-image: url("../images/404.png");
+    background-position: center;
+    background-size: 10em;
+    background-repeat: no-repeat;
+  }
+
+  h1{
+    margin-top: 2em;
+    text-align: center;
+    font-weight: 500;
+    color: $light-gray;
+
+    span{
+      font-weight: 700;
+    }
+  }
+}
+
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .fail{
+    padding-top: 50px;
+
+    &__img{
+      height: 5em;
+      width: 5em;
+      background-size: 5em;
+    }
+
+    h1{
+      font-size: 18px;
+    }
+  }
+}
+
+@media only screen and (max-width:1600px)  and (min-width: 1024px){
+  /* For 1280x720: */
+
+  .fail{
+    padding-top: 100px;
+
+    &__img{
+      height: 8em;
+      width: 8em;
+      background-size: 8em;
+    }
+
+    h1{
+      font-size: 18px;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/failed.css' %}">
+
+<div class="fail">
+    <div class="fail__img"></div>
+    <h1>We didn't find any matched jobs for <span>"{{ input_param }}"</span></h1>
+</div>
+
+{% endblock %}
